@@ -87,11 +87,15 @@ const createSlider = () => {
     alt="">`;
     sliderContainer.appendChild(item)
   })
-  changeSlide(0)
-  timer = setInterval(function () {
-    slideIndex++;
-    changeSlide(slideIndex);
-  }, duration);
+  if(duration>0){
+    changeSlide(0)
+    timer = setInterval(function () {
+      slideIndex++;
+      changeSlide(slideIndex);
+    }, duration);
+  }
+  else
+    alert('Negative value is not valid')
 }
 
 // change slider index 
