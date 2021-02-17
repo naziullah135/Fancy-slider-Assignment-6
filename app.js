@@ -34,7 +34,18 @@ const getImages = (query) => {
     .then(data => showImages(data.hits))
     .catch(err => console.log(err))
 }
-
+let input = document.getElementById("search");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("search-btn").click();
+  }
+});
+// function clearSelection()
+// {
+//  if (window.getSelection) {window.getSelection().removeAllRanges();}
+//  else if (document.selection) {document.selection.empty();}
+// }
 let slideIndex = 0;
 const selectItem = (event, img) => {
   let element = event.target;
