@@ -41,21 +41,16 @@ input.addEventListener("keyup", function(event) {
    document.getElementById("search-btn").click();
   }
 });
-// function clearSelection()
-// {
-//  if (window.getSelection) {window.getSelection().removeAllRanges();}
-//  else if (document.selection) {document.selection.empty();}
-// }
 let slideIndex = 0;
 const selectItem = (event, img) => {
   let element = event.target;
-  element.classList.add('added');
+  element.classList.toggle('added');
  
   let item = sliders.indexOf(img);
   if (item === -1) {
     sliders.push(img);
-  } else {
-    alert('Hey, Already added !')
+  // } else {
+  //   alert('Hey,Already added')
   }
 }
 var timer
@@ -95,7 +90,7 @@ const createSlider = () => {
     }, duration);
   }
   else
-    alert('Negative value is not valid')
+    alert('Negative value is invalid.')
 }
 
 // change slider index 
