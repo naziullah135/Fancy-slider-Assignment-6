@@ -8,9 +8,9 @@ body{
   margin: 0 auto;
   position: relative;
 }
-/* #head{
+#head{
   margin-top: 50px !important;
-} */
+}
 .gallery-header {
   display: none;
 }
