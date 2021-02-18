@@ -18,7 +18,7 @@ const showImages = (images) => {
   document.getElementById("error-message").innerHTML = "";
   if (images.length == 0) {
     errorMessage.innerHTML = `
-    <h3 class="m-5">Something went wrong! please input valid name.</h3>
+    <h3 style="font-style:italic" class="m-5">Something went wrong! please input valid name.</h3>
     `;
   } else {
     imagesArea.style.display = "block";
