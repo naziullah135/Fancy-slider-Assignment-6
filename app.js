@@ -63,8 +63,8 @@ const selectItem = (event, img) => {
   let item = sliders.indexOf(img);
   if (item === -1) {
     sliders.push(img);
-    // } else {
-    // sliders.pop(img);
+    } else {
+    sliders.pop(img);
   }
 };
 var timer;
